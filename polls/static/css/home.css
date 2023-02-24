@@ -1,0 +1,11 @@
+.landing_image {
+  position: absolute;
+  width: 100%;
+  max-height: fit-content;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  margin-bottom: 30px;
+  margin-top: 0;
+  object-fit: cover;
+}
