@@ -1,42 +1,43 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-  <link
-  rel="shortcut icon"
-  type="image/png"
-  href="{% static 'favicon.ico' %}"
->
-  <title>Paloma and Jef</title>
-  {% block head %}
-  {% endblock %}
-</head>
-<body>
-  <main>
-    <div class="content">
-    {% block content %}
-    {% endblock %}
-    </div>
-    <nav>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="/dogs">All Dogs</a></li>
-        <li><a href="{% url 'dogs_create' %}">Add a Dog</a></li>
-        <li><a href="{% url 'toys_index' %}">All Toys</a></li>
-        <li><a href="{% url 'toys_create' %}">Add a Toy</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="{% url 'logout' %}">Log out</a></li>
-        {% else %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.ico' %}"
+    />
+    <title>Paloma and Jef</title>
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <main>
+      <div class="content">{% block content %} {% endblock %}</div>
+      <nav>
+        <ul>
+          {% if user.is_authenticated %}
+          <li><a href="/dogs">All Dogs</a></li>
+          <li><a href="{% url 'dogs_create' %}">Add a Dog</a></li>
+          <li><a href="{% url 'toys_index' %}">All Toys</a></li>
+          <li><a href="{% url 'toys_create' %}">Add a Toy</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'logout' %}">Log out</a></li>
+          {% else %}
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Login</a></li>
-          {% comment %} <li><a href="{% url 'signup' %}">Sign Up</a></li> {% endcomment %}
-          {% endif %}
-      </ul>
-    </nav> 
-  </main>
-</body>
+          <li><a>Schedule</a></li>
+          <li><a>Photos</a></li>
+          <li><a>Registry</a></li>
+          <li><a>RSVP</a></li>
+          {% comment %}
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          {% endcomment %} {% endif %}
+        </ul>
+      </nav>
+    </main>
+  </body>
 </html>

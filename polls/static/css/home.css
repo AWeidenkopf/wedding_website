@@ -1,7 +1,7 @@
 .landing_image {
   position: absolute;
   width: 100%;
-  max-height: fit-content;
+  height: 88vh;
   margin: auto;
   overflow: auto;
   position: fixed;
