@@ -4,8 +4,19 @@
   height: 88vh;
   margin: auto;
   overflow: auto;
-  position: fixed;
   margin-bottom: 30px;
   margin-top: 0;
   object-fit: cover;
+}
+
+.getting_married_container {
+  margin-top: 88vh;
+  width: 100%;
+  height: 1300px;
+  position: absolute;
+  display: block;
+}
+
+.getting_married_container p {
+  margin-top: 100vh;
 }
