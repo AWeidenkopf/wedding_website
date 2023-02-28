@@ -21,9 +21,26 @@ main {
 }
 
 nav {
-  background-color: blue;
-  margin-top: 85vh;
+  background-color: #B07156;
+  margin-top: 88vh;
   position: fixed;
-  display: inline;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
+  color: white;
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
 }
