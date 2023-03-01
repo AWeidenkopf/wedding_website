@@ -19,9 +19,12 @@ main {
   display: inline-block;
 }
 
+#navbar {
+  display: none;
+}
+
 nav {
   background-color: #b07156;
-  display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -29,6 +32,13 @@ nav {
   height: 80px;
   position: sticky;
   margin-top: 88vh;
+}
+
+.navbar_mobile {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 20px;
 }
 
 .navbar_fixed_top {
@@ -48,4 +58,14 @@ nav ul {
 nav ul a {
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  #navbar {
+    display: flex;
+  }
+
+  #navbar_mobile {
+    display: none;
+  }
 }

@@ -12,6 +12,7 @@
       href="{% static 'favicon.ico' %}"
     />
     <script src="{% static 'js/sticky_navbar.js'%}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Paloma and Jef</title>
     {% block head %} {% endblock %}
   </head>
@@ -28,6 +29,19 @@
           <li><a>RSVP</a></li>
         </ul>
       </nav>
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+        <nav id="navbar_mobile" class="navbar-dark navbar_mobile">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
     </main>
   </body>
 </html>
